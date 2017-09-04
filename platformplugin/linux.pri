@@ -64,13 +64,3 @@ contains(QT_CONFIG, xcb-sm)|qtConfig(xcb-sm) {
 contains(QT_CONFIG, xcb-qt) {
     DEFINES += XCB_USE_RENDER
 }
-
-exists($$PWD/libqt5xcbqpa-dev) {
-    !system(cd $$PWD/libqt5xcbqpa-dev && git checkout $$VERSION) {
-        !system(cd $$PWD/libqt5xcbqpa-dev && git fetch -p):error(update libqt5xcbqpa header sources failed)
-        !system(cd $$PWD/libqt5xcbqpa-dev && git checkout $$VERSION):error(Not support Qt Version: $$VERSION)
-    }
-} else {
-    !system(git clone https://cr.deepin.io/libqt5xcbqpa-dev):error(clone libqt5xcbqpa header sources failed)
-    !system(cd $$PWD/libqt5xcbqpa-dev && git checkout $$VERSION):error(Not support Qt Version: $$VERSION)
-}
