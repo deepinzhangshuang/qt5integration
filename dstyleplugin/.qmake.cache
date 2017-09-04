@@ -1,0 +1,2 @@
+CONFIG += config_dtkwidget
+CONFIG += done_config_dtkwidget

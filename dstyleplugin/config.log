@@ -1,0 +1,9 @@
+executing config test dtkwidget
++ cd /run/build-runtime/dde-qt5integration/dstyleplugin/config.tests/dtkwidget && /usr/bin/qmake  -spec /usr/lib/mkspecs/linux-g++ "CONFIG -= qt debug_and_release app_bundle lib_bundle" /run/build-runtime/dde-qt5integration/dstyleplugin/config.tests/dtkwidget
+> Info: creating stash file /run/build-runtime/dde-qt5integration/dstyleplugin/.qmake.stash
++ cd /run/build-runtime/dde-qt5integration/dstyleplugin/config.tests/dtkwidget && MAKEFLAGS= make
+> make[1]: Entering directory '/run/build-runtime/dde-qt5integration/dstyleplugin/config.tests/dtkwidget'
+> g++ -c -pipe -g -std=gnu++11 -D_REENTRANT -Wall -W -fPIC -DQT_GUI_LIB -DQT_CORE_LIB -I. -isystem /usr/include/libdtk-2.0/DWidget -isystem /usr/include/libdtk-2.0/DCore -isystem /usr/include/QtGui -isystem /usr/include/QtCore -I. -isystem /usr/include/libdrm -I/usr/lib/mkspecs/linux-g++ -o main.o main.cpp
+> g++  -o dtkwidget main.o   -ldtkwidget -ldtkcore -lQt5Gui -lQt5Core -lGL -lpthread 
+> make[1]: Leaving directory '/run/build-runtime/dde-qt5integration/dstyleplugin/config.tests/dtkwidget'
+test dtkwidget succeeded
